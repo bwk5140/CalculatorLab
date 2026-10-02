@@ -15,7 +15,7 @@ const multiplyHistory = []
 function add(num1, num2){
     let sum = num1 + num2;
     console.log(sum);
-    addToHistory(sum);
+    addToHistory({operand1: num1, operator: "+", operand2: num2, result: sum});
     return sum;
 }
 
@@ -42,7 +42,7 @@ function getHistory(){
 function Subtract(num1, num2){
     let result = num1 - num2;
     console.log(result);
-    addToHistory(result);
+    addToHistory({operand1: num1, operator: "-", operand2: num2, result: result});
     return result;
 }
 
@@ -52,7 +52,7 @@ function Subtract(num1, num2){
 function multiply(num1, num2){
     const result = num1 * num2;
     console.log(result);
-    addToHistory(result);
+    addToHistory({operand1: num1, operator: "*", operand2: num2, result: result});
     return result;
 }
 
@@ -62,6 +62,6 @@ function multiply(num1, num2){
 function divide(num1, num2){
     let result = num1 / num2;
     console.log(result);
-    addToHistory(result);
+    addToHistory({operand1 : num1, operator: "/", operand2: num2, result: result});
     return result;
 }
